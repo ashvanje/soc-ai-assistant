@@ -1,0 +1,105 @@
+﻿Summary,Issue key,Priority,Resolution,Assignee,Reporter,Creator,Custom field (Raw Alert)
+[Wazuh] AWS Config Managed Rules - ams-nist-cis-vpc-default-security-group-closed,MSS-742849,High,Pending Remediation,jaymicabani,pwcadmin,pwcadmin,"{code}{
+  ""timestamp"": ""2023-01-01T00:00:05.104+0800"",
+  ""rule"": {
+    ""level"": 12,
+    ""description"": ""AWS Config Managed Rules - ams-nist-cis-vpc-default-security-group-closed"",
+    ""id"": ""135500"",
+    ""firedtimes"": 1,
+    ""mail"": true,
+    ""groups"": [
+      ""amazon"",
+      "" aws"",
+      "" cisco_umbrella "",
+      ""pwc_caas"",
+      ""OS"",
+      ""windows"",
+      ""all_client""
+    ]
+  },
+  ""agent"": {
+    ""id"": ""4724"",
+    ""name"": ""nowe-pwcsoc-LogCollector"",
+    ""ip"": ""172.18.40.79"",
+    ""labels"": {
+      ""customer"": ""nowe""
+    }
+  },
+  ""manager"": {
+    ""name"": ""plwaznwo20.int.darklab.hk""
+  },
+  ""id"": ""1672502405.1811043"",
+  ""cluster"": {
+    ""name"": ""wazuh"",
+    ""node"": ""plwaznwo20""
+  },
+  ""full_log"": ""{\""integration\"": \""aws\"", \""aws\"": {\""log_info\"": {\""aws_account_alias\"": \""\"", \""log_file\"": \""2022/12/31/14/aws-config-delivery-stream-1-2022-12-31-14-32-29-feb52248-53b1-4816-945b-7133dcac50e8\"", \""s3bucket\"": \""pwc-config-bucket-nowe\""}, \""eventVersion\"": \""1.08\"", \""userIdentity\"": {\""type\"": \""AssumedRole\"", \""principalId\"": \""AROAZ2R6CGOGBYT5RUDPA:configLambdaExecution\"", \""arn\"": \""arn:aws:sts::675513774988:assumed-role/AWSServiceRoleForConfig/configLambdaExecution\"", \""accountId\"": \""675513774988\"", \""accessKeyId\"": \""ASIAZ2R6CGOGN4NGODOB\"", \""sessionContext\"": {\""sessionIssuer\"": {\""type\"": \""Role\"", \""principalId\"": \""AROAZ2R6CGOGBYT5RUDPA\"", \""arn\"": \""arn:aws:iam::675513774988:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig\"", \""accountId\"": \""675513774988\"", \""userName\"": \""AWSServiceRoleForConfig\""}, \""webIdFederationData\"": {}, \""attributes\"": {\""creationDate\"": \""2022-12-31T14:32:34Z\"", \""mfaAuthenticated\"": \""false\""}}, \""invokedBy\"": \""config.amazonaws.com\""}, \""eventTime\"": \""2022-12-31T14:32:34Z\"", \""eventSource\"": \""config.amazonaws.com\"", \""eventName\"": \""PutEvaluations\"", \""awsRegion\"": \""ap-southeast-1\"", \""sourceIPAddress\"": \""config.amazonaws.com\"", \""userAgent\"": \""config.amazonaws.com\"", \""requestParameters\"": {\""resultToken\"": \""HIDDEN_DUE_TO_SECURITY_REASONS\"", \""testMode\"": false, \""evaluations\"": {\""orderingTimestamp\"": \""Dec 31, 2022 2:32:20 PM\"", \""complianceResourceType\"": \""AWS::EC2::SecurityGroup\"", \""complianceResourceId\"": \""sg-11e44568\"", \""complianceType\"": \""NOT_APPLICABLE\""}}, \""additionalEventData\"": {\""configRuleName\"": \""ams-nist-cis-vpc-default-security-group-closed\"", \""configRuleArn\"": \""arn:aws:config:ap-southeast-1:675513774988:config-rule/config-rule-4e6oh0\"", \""notificationJobType\"": \""NOTIFIED\"", \""managedRuleIdentifier\"": \""VPC_DEFAULT_SECURITY_GROUP_CLOSED\""}, \""requestID\"": \""4ed255e6-2e08-44bc-b140-165ee99fd5cc\"", \""eventID\"": \""a74856cc-e158-44f6-989f-8063fb572f28\"", \""readOnly\"": false, \""eventType\"": \""AwsApiCall\"", \""managementEvent\"": true, \""recipientAccountId\"": \""675513774988\"", \""eventCategory\"": \""Management\"", \""source\"": \""config\""}}"",
+  ""decoder"": {
+    ""name"": ""aws-json""
+  },
+  ""data"": {
+    ""dstuser"": ""AWSServiceRoleForConfig"",
+    ""integration"": ""aws"",
+    ""aws"": {
+      ""log_info"": {
+        ""log_file"": ""2022/12/31/14/aws-config-delivery-stream-1-2022-12-31-14-32-29-feb52248-53b1-4816-945b-7133dcac50e8"",
+        ""s3bucket"": ""pwc-config-bucket-nowe""
+      },
+      ""eventVersion"": ""1.08"",
+      ""userIdentity"": {
+        ""type"": ""AssumedRole"",
+        ""principalId"": ""AROAZ2R6CGOGBYT5RUDPA:configLambdaExecution"",
+        ""arn"": ""arn:aws:sts::675513774988:assumed-role/AWSServiceRoleForConfig/configLambdaExecution"",
+        ""accountId"": ""675513774988"",
+        ""accessKeyId"": ""ASIAZ2R6CGOGN4NGODOB"",
+        ""sessionContext"": {
+          ""sessionIssuer"": {
+            ""type"": ""Role"",
+            ""principalId"": ""AROAZ2R6CGOGBYT5RUDPA"",
+            ""arn"": ""arn:aws:iam::675513774988:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig"",
+            ""accountId"": ""675513774988"",
+            ""userName"": ""AWSServiceRoleForConfig""
+          },
+          ""attributes"": {
+            ""creationDate"": ""2022-12-31T14:32:34Z"",
+            ""mfaAuthenticated"": ""false""
+          }
+        },
+        ""invokedBy"": ""config.amazonaws.com""
+      },
+      ""eventTime"": ""2022-12-31T14:32:34Z"",
+      ""eventSource"": ""config.amazonaws.com"",
+      ""eventName"": ""PutEvaluations"",
+      ""awsRegion"": ""ap-southeast-1"",
+      ""sourceIPAddress"": ""config.amazonaws.com"",
+      ""userAgent"": ""config.amazonaws.com"",
+      ""requestParameters"": {
+        ""resultToken"": ""HIDDEN_DUE_TO_SECURITY_REASONS"",
+        ""testMode"": ""false"",
+        ""evaluations"": {
+          ""orderingTimestamp"": ""Dec 31, 2022 2:32:20 PM"",
+          ""complianceResourceType"": ""AWS::EC2::SecurityGroup"",
+          ""complianceResourceId"": ""sg-11e44568"",
+          ""complianceType"": ""NOT_APPLICABLE""
+        }
+      },
+      ""additionalEventData"": {
+        ""configRuleName"": ""ams-nist-cis-vpc-default-security-group-closed"",
+        ""configRuleArn"": ""arn:aws:config:ap-southeast-1:675513774988:config-rule/config-rule-4e6oh0"",
+        ""notificationJobType"": ""NOTIFIED"",
+        ""managedRuleIdentifier"": ""VPC_DEFAULT_SECURITY_GROUP_CLOSED""
+      },
+      ""requestID"": ""4ed255e6-2e08-44bc-b140-165ee99fd5cc"",
+      ""eventID"": ""a74856cc-e158-44f6-989f-8063fb572f28"",
+      ""readOnly"": ""false"",
+      ""eventType"": ""AwsApiCall"",
+      ""managementEvent"": ""true"",
+      ""recipientAccountId"": ""675513774988"",
+      ""eventCategory"": ""Management"",
+      ""source"": ""config""
+    },
+    ""user_agent"": ""config.amazonaws.com"",
+    ""logsource"": ""pwc-config-bucket-nowe""
+  },
+  ""location"": ""Wazuh-AWS""
+}{code}"
