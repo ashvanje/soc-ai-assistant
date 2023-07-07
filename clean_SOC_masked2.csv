@@ -1,0 +1,559 @@
+﻿Summary,Issue key,Priority,Resolution,Assignee,Reporter,Creator,Created,Updated,Last Viewed,Resolved,Description,Alert to first response,Alert to first response simplified,Source,Custom field (Raw Alert)
+azu Symantec Alert: ID: 32939] Audit: TeamViewer Remote Access Activity attack detected but not blocked. Application path: D:\???????????????\TEAMVIEWER\TEAMVIEWER_SERVICE.EXE,MSS-742868,High,Pending Remediation,jaymicabani,vnlkjnadmin,vnlkjnadmin,1/1/2023 0:03,1/1/2023 2:03,14/2/2023 14:03,1/1/2023 0:20,,0:38,38min,knrryprrpsnk,"{code}{
+  ""timestamp"": ""2023-01-01T00:00:32.522+0800"",
+  ""rule"": {
+    ""level"": 12,
+    ""description"": ""Symantec Alert: ID: 32939] Audit: TeamViewer Remote Access Activity attack detected but not blocked. Application path: D:\\\u65b0\u5efa\u6587\u4ef6\u5939\\TEAMVIEWER\\TEAMVIEWER_SERVICE.EXE"",
+    ""id"": ""134606"",
+    ""firedtimes"": 1,
+    ""mail"": true,
+    ""groups"": [
+      ""vnlkjn_caas"",
+      ""sep""
+    ]
+  },
+  ""agent"": {
+    ""id"": ""4204"",
+    ""name"": ""lkjnlakwenpropshk-logcollector-HKKPLLOG001"",
+    ""ip"": ""172.13.2315.18"",
+    ""labels"": {
+      ""customer"": ""lkjnlakwenpropslawkjnvew""
+    }
+  },
+  ""manager"": {
+    ""name"": ""plwaznwo01.int.ljnaewknvjawev.lawkjnvew""
+  },
+  ""id"": ""1672502432.1768182"",
+  ""cluster"": {
+    ""name"": ""wazuh"",
+    ""node"": ""plwaznwo01""
+  },
+  ""full_log"": ""Dec 31 23:53:15 HKKPLSEP007 SymantecServer: KEC-RPA,Event Description: ID: 32939] Audit: TeamViewer Remote Access Activity attack detected but not blocked. Application path: D:\\\u65b0\u5efa\u6587\u4ef6\u5939\\TEAMVIEWER\\TEAMVIEWER_SERVICE.EXE,Event Type: ,Local Host IP: 172.215.51.75,Local Host MAC: 000000000000,Remote Host Name: ,Remote Host IP: 32.252.224.173,Remote Host MAC: 000000000000,Outbound,TCP,Allowed,Begin: 2022-12-31 23:23:41,End Time: 2022-12-31 23:23:41,Occurrences: 1,Application: D:/\u65b0\u5efa\u6587\u4ef6\u5939/TEAMVIEWER/TEAMVIEWER_SERVICE.EXE,Location: Default,User Name: none,Domain Name: ,Local Port: 50225,Remote Port: 5938,CIDS Signature ID: 32939,CIDS Signature string: Audit: TeamViewer Remote Access Activity,CIDS Signature SubID: 65537,Intrusion URL: ,Intrusion Payload URL: ,SHA-256: 77C94A778B99F141F000E42BD0C95575F208CABD1E5E565F6CE3D76E66DADE0D,MD-5: ,Intensive Protection Level: N/A,URL Risk: N/A,URL Category: N/A"",
+  ""predecoder"": {
+    ""program_name"": ""SymantecServer"",
+    ""timestamp"": ""Dec 31 23:53:15"",
+    ""hostname"": ""HKKPLSEP007""
+  },
+  ""decoder"": {
+    ""name"": ""sepm-security""
+  },
+  ""data"": {
+    ""protocol"": ""TCP"",
+    ""srcip"": ""172.215.51.75"",
+    ""srcport"": ""50225"",
+    ""dstip"": ""32.252.224.173"",
+    ""dstport"": ""5938"",
+    ""symantecServer"": {
+      ""host_name"": ""KEC-RPA"",
+      ""event_description"": ""ID: 32939] Audit: TeamViewer Remote Access Activity attack detected but not blocked. Application path: D:\\\u65b0\u5efa\u6587\u4ef6\u5939\\TEAMVIEWER\\TEAMVIEWER_SERVICE.EXE"",
+      ""local_mac"": ""000000000000"",
+      ""remote_mac"": ""000000000000"",
+      ""direction"": ""Outbound"",
+      ""hack_type"": ""Allowed"",
+      ""start_datetime"": ""2022-12-31 23:23:41"",
+      ""end_datetime"": ""2022-12-31 23:23:41"",
+      ""occurrences"": ""1"",
+      ""application_name"": ""D:/\u65b0\u5efa\u6587\u4ef6\u5939/TEAMVIEWER/TEAMVIEWER_SERVICE.EXE"",
+      ""location_name"": ""Default"",
+      ""CIDS_signature_id"": ""32939"",
+      ""CIDS_signature_string"": ""Audit: TeamViewer Remote Access Activity"",
+      ""CIDS_signature_subid"": ""65537"",
+      ""sha256_hash"": ""77C94A778B99F141F000E42BD0C95575F208CABD1E5E565F6CE3D76E66DADE0D"",
+      ""intensive_protection_level"": ""N/A"",
+      ""url_risk"": ""N/A"",
+      ""url_category"": ""N/A"",
+      ""application_path"": ""D:\\\u65b0\u5efa\u6587\u4ef6\u5939\\TEAMVIEWER\\TEAMVIEWER_SERVICE.EXE"",
+      ""payload"": ""KEC-RPA,Event Description: ID: 32939] Audit: TeamViewer Remote Access Activity attack detected but not blocked. Application path: D:\\\u65b0\u5efa\u6587\u4ef6\u5939\\TEAMVIEWER\\TEAMVIEWER_SERVICE.EXE,Event Type: ,Local Host IP: 172.215.51.75,Local Host MAC: 000000000000,Remote Host Name: ,Remote Host IP: 32.252.224.173,Remote Host MAC: 000000000000,Outbound,TCP,Allowed,Begin: 2022-12-31 23:23:41,End Time: 2022-12-31 23:23:41,Occurrences: 1,Application: D:/\u65b0\u5efa\u6587\u4ef6\u5939/TEAMVIEWER/TEAMVIEWER_SERVICE.EXE,Location: Default,User Name: none,Domain Name: ,Local Port: 50225,Remote Port: 5938,CIDS Signature ID: 32939,CIDS Signature string: Audit: TeamViewer Remote Access Activity,CIDS Signature SubID: 65537,Intrusion URL: ,Intrusion Payload URL: ,SHA-256: 77C94A778B99F141F000E42BD0C95575F208CABD1E5E565F6CE3D76E66DADE0D,MD-5: ,Intensive Protection Level: N/A,URL Risk: N/A,URL Category: N/A""
+    },
+    ""srcusr"": ""none""
+  },
+  ""location"": ""/var/log/rsyslog-172.13.223.138-HKKPLSEP002.log""
+}{code}"
+azu Unsigned kernel module was loaded ig,MSS-742869,High,False Positive confirmed by customer,marklayague,vnlkjnadmin,vnlkjnadmin,1/1/2023 0:04,1/1/2023 0:29,14/2/2023 14:03,1/1/2023 0:29,"|??|*Imperva Alerts*
+*-*
+*Deliverable*|*Connection Attempt TO Malicious IP(s)/domain(s)* 
+OR
+*Outgoing Network Traffic with Administrative Protocols*
+*-*
+*Deliverable*|*Detected Potential DCSync*
+*-*
+*Deliverable*|*Member Added to a Privileged Group*
+*-*
+*Deliverable*|*DarkTrace Alerts*
+*-*
+*Deliverable*|*Windows Events Logs Related Alerts (Detect Suspicious LoL commands / Potential Windows Service Persistence)*
+*-*
+*Deliverable*|*Linux Syslog related Alerts (PAM: Multiple failed logins in a small period of time / New user/group added to the system / Root's crontab entry changed)*
+*-*
+*Deliverable*|
+|Source IP|IP (External)|IP (Internal)|N/A|N/A|IP|N/A|IP|
+|Source User|N/A|Username|Subject Username|Subject Username|Username|Username|Username|
+|Destination IP|IP (Internal)|IP (External)|N/A|N/A|IP|N/A|N/A|
+|Destination Domain|Domain|Domain (External)|N/A|N/A|Domain|N/A|N/A|
+|Destination Port|Port|Port|N/A|N/A|Port|N/A|N/A|
+|Action|Action (Imperva)|Action|N/A|N/A|Action|N/A|N/A|
+|Full URL|Full URL (Host+URL)|Full URL|N/A|N/A|Full URL|N/A|N/A|
+|Palo Alto Log ?Ä? URL Category|N/A|URL Category|N/A|N/A|N/A|N/A|N/A|
+|Urlscan.io Result|N/A|Screenshot|N/A|N/A|Screenshot|N/A|N/A|
+|DarkTrace Model Breach Name|N/A|N/A|N/A|N/A|DarkTrace Model Breach Name|N/A|N/A|
+|AbuseIPDB confidence of External IP|Confidence percentage|Confidence percentage|N/A|N/A|Confidence percentage|N/A|N/A|
+|VirusTotal result of External IP / Domain|Result number|Result number|N/A|N/A|Result number|N/A|N/A|
+|External IP / Domain in vnlkjn TI (MISP)|Yes / No|Yes / No|N/A|N/A|Yes / No|N/A|N/A|
+|External IP Geolocation|Geolocation|Geolocation|N/A|N/A|Geolocation|N/A|N/A|
+|Target User|N/A|N/A|N/A|Username|Username|N/A|Username|
+|Target Group|N/A|N/A|N/A|Group Name|Group Name|N/A|Group Name|
+|Command|N/A|N/A|N/A|N/A|Command|Command|Command|
+|Filename|N/A|N/A|N/A|N/A|Filename|Filename|N/A|
+|Host|N/A|N/A|Hostname|Hostname|Hostname|Hostname|Hostname|
+|Control Access|N/A|N/A|Control Access ID and explanation|N/A|N/A|N/A|N/A|
+|Recommended Action|-?????????????????? Block IP / Keep monitoring|-?????????????????? Initiate full scan
+-?????????????????? Block IP / Keep monitoring
+-?????????????????? Verify if the outgoing traffic is legitimate|-?????????????????? Verify if the action is legitimate|-?????????????????? Verify if the action is legitimate|-?????????????????? Verify if the action is legitimate|-?????????????????? Verify if the action is legitimate|-?????????????????? Verify if the action is legitimate|
+
+??",0:29,29min,gmjjsnk,"{code}{
+  ""timestamp"": ""2023-01-01T00:03:53.791+0800"",
+  ""rule"": {
+    ""level"": 11,
+    ""description"": ""Unsigned kernel module was loaded"",
+    ""id"": ""5132"",
+    ""firedtimes"": 1,
+    ""mail"": false,
+    ""groups"": [
+      ""syslog"",
+      ""linuxkernel""
+    ]
+  },
+  ""agent"": {
+    ""id"": ""4105"",
+    ""name"": ""gtjashk-vnlkjnsoc-LXPRDLOCA15.gtja.com.lawkjnvew"",
+    ""ip"": ""192.163.1.85"",
+    ""labels"": {
+      ""customer"": ""gtjaslawkjnvew""
+    }
+  },
+  ""manager"": {
+    ""name"": ""plwaznwo03.int.ljnaewknvjawev.lawkjnvew""
+  },
+  ""id"": ""1672502633.468930151"",
+  ""cluster"": {
+    ""name"": ""wazuh"",
+    ""node"": ""plwaznwo08""
+  },
+  ""full_log"": ""Jan  1 00:01:49 itrsn1 kernel: smartpqi: module verification failed: signature and/or required key missing - tainting kernel"",
+  ""predecoder"": {
+    ""program_name"": ""kernel"",
+    ""timestamp"": ""Jan  1 00:01:49"",
+    ""hostname"": ""itrsn1""
+  },
+  ""decoder"": {
+    ""name"": ""kernel""
+  },
+  ""location"": ""/var/log/rsyslog-192.163.1.64-itrsn1.log""
+}{code}"
+azu Unsigned kernel module was loaded ig,MSS-742871,High,False Positive confirmed by customer,marklayague,vnlkjnadmin,vnlkjnadmin,1/1/2023 0:04,1/1/2023 0:29,14/2/2023 14:03,1/1/2023 0:29,"|??|*Imperva Alerts*
+*-*
+*Deliverable*|*Connection Attempt TO Malicious IP(s)/domain(s)* 
+OR
+*Outgoing Network Traffic with Administrative Protocols*
+*-*
+*Deliverable*|*Detected Potential DCSync*
+*-*
+*Deliverable*|*Member Added to a Privileged Group*
+*-*
+*Deliverable*|*DarkTrace Alerts*
+*-*
+*Deliverable*|*Windows Events Logs Related Alerts (Detect Suspicious LoL commands / Potential Windows Service Persistence)*
+*-*
+*Deliverable*|*Linux Syslog related Alerts (PAM: Multiple failed logins in a small period of time / New user/group added to the system / Root's crontab entry changed)*
+*-*
+*Deliverable*|
+|Source IP|IP (External)|IP (Internal)|N/A|N/A|IP|N/A|IP|
+|Source User|N/A|Username|Subject Username|Subject Username|Username|Username|Username|
+|Destination IP|IP (Internal)|IP (External)|N/A|N/A|IP|N/A|N/A|
+|Destination Domain|Domain|Domain (External)|N/A|N/A|Domain|N/A|N/A|
+|Destination Port|Port|Port|N/A|N/A|Port|N/A|N/A|
+|Action|Action (Imperva)|Action|N/A|N/A|Action|N/A|N/A|
+|Full URL|Full URL (Host+URL)|Full URL|N/A|N/A|Full URL|N/A|N/A|
+|Palo Alto Log ?Ä? URL Category|N/A|URL Category|N/A|N/A|N/A|N/A|N/A|
+|Urlscan.io Result|N/A|Screenshot|N/A|N/A|Screenshot|N/A|N/A|
+|DarkTrace Model Breach Name|N/A|N/A|N/A|N/A|DarkTrace Model Breach Name|N/A|N/A|
+|AbuseIPDB confidence of External IP|Confidence percentage|Confidence percentage|N/A|N/A|Confidence percentage|N/A|N/A|
+|VirusTotal result of External IP / Domain|Result number|Result number|N/A|N/A|Result number|N/A|N/A|
+|External IP / Domain in vnlkjn TI (MISP)|Yes / No|Yes / No|N/A|N/A|Yes / No|N/A|N/A|
+|External IP Geolocation|Geolocation|Geolocation|N/A|N/A|Geolocation|N/A|N/A|
+|Target User|N/A|N/A|N/A|Username|Username|N/A|Username|
+|Target Group|N/A|N/A|N/A|Group Name|Group Name|N/A|Group Name|
+|Command|N/A|N/A|N/A|N/A|Command|Command|Command|
+|Filename|N/A|N/A|N/A|N/A|Filename|Filename|N/A|
+|Host|N/A|N/A|Hostname|Hostname|Hostname|Hostname|Hostname|
+|Control Access|N/A|N/A|Control Access ID and explanation|N/A|N/A|N/A|N/A|
+|Recommended Action|-?????????????????? Block IP / Keep monitoring|-?????????????????? Initiate full scan
+-?????????????????? Block IP / Keep monitoring
+-?????????????????? Verify if the outgoing traffic is legitimate|-?????????????????? Verify if the action is legitimate|-?????????????????? Verify if the action is legitimate|-?????????????????? Verify if the action is legitimate|-?????????????????? Verify if the action is legitimate|-?????????????????? Verify if the action is legitimate|
+
+??",0:30,30min,gmjjsnk,"{code}{
+  ""timestamp"": ""2023-01-01T00:04:51.566+0800"",
+  ""rule"": {
+    ""level"": 11,
+    ""description"": ""Unsigned kernel module was loaded"",
+    ""id"": ""5132"",
+    ""firedtimes"": 2,
+    ""mail"": false,
+    ""groups"": [
+      ""syslog"",
+      ""linuxkernel""
+    ]
+  },
+  ""agent"": {
+    ""id"": ""4020"",
+    ""name"": ""gtjashk-vnlkjnsoc-LXPRDLOCA1"",
+    ""ip"": ""192.163.3.199"",
+    ""labels"": {
+      ""customer"": ""gtjaslawkjnvew""
+    }
+  },
+  ""manager"": {
+    ""name"": ""plwaznwo03.int.ljnaewknvjawev.lawkjnvew""
+  },
+  ""id"": ""1672502691.578482175"",
+  ""cluster"": {
+    ""name"": ""wazuh"",
+    ""node"": ""plwaznwo08""
+  },
+  ""full_log"": ""Dec 31 23:48:10 itrsn3 kernel: smartpqi: module verification failed: signature and/or required key missing - tainting kernel"",
+  ""predecoder"": {
+    ""program_name"": ""kernel"",
+    ""timestamp"": ""Dec 31 23:48:10"",
+    ""hostname"": ""itrsn3""
+  },
+  ""decoder"": {
+    ""name"": ""kernel""
+  },
+  ""location"": ""/var/log/rsyslog-192.163.1.66-itrsn3.log""
+}{code}"
+azu Medium Severity Cortex XDR Alert: A remote service was created via RPC over SMB,MSS-742872,High,False Positive,xiulanshen,vnlkjnadmin,vnlkjnadmin,1/1/2023 0:05,1/1/2023 0:31,14/2/2023 14:03,1/1/2023 0:31,,0:29,29min,mrppjnmnrrnll,"{code}{
+  ""timestamp"": ""2023-01-01T00:05:11.280+0800"",
+  ""rule"": {
+    ""level"": 12,
+    ""description"": ""Medium Severity Cortex XDR Alert: A remote service was created via RPC over SMB"",
+    ""id"": ""139002"",
+    ""firedtimes"": 1,
+    ""mail"": true,
+    ""groups"": [
+      ""vnlkjn_caas"",
+      ""cortex_xdr"",
+      ""auto_escalate_disabled"",
+      ""cortex_alert"",
+      ""group_by_data.srcip""
+    ]
+  },
+  ""agent"": {
+    ""id"": ""548"",
+    ""name"": ""toppanmerrill-vnlkjnsoc-plwazag04.int.ljnaewknvjawev.lawkjnvew"",
+    ""ip"": ""172.13.415.49"",
+    ""labels"": {
+      ""customer"": ""toppanmerrill""
+    }
+  },
+  ""manager"": {
+    ""name"": ""plwaznwo14.int.ljnaewknvjawev.lawkjnvew""
+  },
+  ""id"": ""1672502711.34690226"",
+  ""cluster"": {
+    ""name"": ""wazuh"",
+    ""node"": ""plwaznwo14""
+  },
+  ""full_log"": ""{\""cortex_xdr\"": {\""external_id\"": \""d89ec638-960e-4008-872e-1bcf3ae36599\"", \""severity\"": \""medium\"", \""matching_status\"": \""MATCHED\"", \""local_insert_ts\"": 1672502640628, \""matching_service_rule_id\"": \""f33c6ecc-cb20-4f2a-8bf8-869d21f18b0e\"", \""mitre_technique_id_and_name\"": [\""T1021.002 - Remote Services: SMB/Windows Admin Shares\""], \""mitre_tactic_id_and_name\"": [\""TA0008 - Lateral Movement\""], \""agent_version\"": \""2.3.15.64267\"", \""agent_os_type\"": \""Windows\"", \""agent_os_sub_type\"": \""Windows Server 2016 [115.0 (Build 17763)]\"", \""alert_type\"": \""Unclassified\"", \""resolution_status\"": \""STATUS_010_NEW\"", \""tags\"": [\""DS:PANW/XDR Agent\""], \""alert_id\"": \""4049577\"", \""detection_timestamp\"": 1672502426375, \""name\"": \""A remote service was created via RPC over SMB\"", \""category\"": \""Lateral Movement\"", \""endpoint_id\"": \""332358f31d8f4026af5ea001ac1ce1d0\"", \""description\"": \""The service RemComSvc was created via RPC over SMB from 115.23.4.223. This service binary image has been seen on 4 hosts in the last 30 days\"", \""host_ip\"": [\""115.23.4.213\""], \""host_name\"": \""HK01FS09\"", \""source\"": \""XDR Analytics BIOC\"", \""action\"": \""DETECTED\"", \""action_pretty\"": \""Detected\"", \""original_tags\"": [\""DS:PANW/XDR Agent\""], \""agent_install_type\"": \""STANDARD\"", \""agent_host_boot_time\"": 1664354466362, \""event_sub_type\"": 2, \""association_strength\"": 50, \""event_id\"": \""AAABhWjpumHfQRZTARvgGw==\"", \""event_type\"": \""RPC Call\"", \""event_timestamp\"": 1672502426375, \""actor_process_instance_id\"": \""AAAAAAUc5+QFACBJ57E/vg==\"", \""actor_process_signature_status\"": \""N/A\"", \""actor_causality_id\"": \""AAAAAAUc5+QFACBJ57E/vg==\"", \""causality_actor_process_signature_status\"": \""N/A\"", \""action_country\"": \""UNKNOWN\"", \""action_process_signature_status\"": \""N/A\"", \""os_actor_process_instance_id\"": \""AdjTFg6uyrcAAAJYAAAAAA==\"", \""os_actor_process_image_path\"": \""C:\\\\Windows\\\\System32\\\\services.exe\"", \""os_actor_process_image_name\"": \""services.exe\"", \""os_actor_process_command_line\"": \""C:\\\\Windows\\\\system32\\\\services.exe\"", \""os_actor_process_signature_status\"": \""Signed\"", \""os_actor_process_signature_vendor\"": \""Microsoft Corporation\"", \""os_actor_process_image_sha256\"": \""751cd7ab78b18a2d8a55c47ca75b90a14234ac974d81be5f198d301b59183873\"", \""os_actor_process_causality_id\"": \""AdjTFg6uyrcAAAJYAAAAAA==\"", \""os_actor_process_os_pid\"": 600, \""os_actor_thread_thread_id\"": 5152, \""fw_is_phishing\"": \""N/A\"", \""contains_featured_host\"": \""NO\"", \""contains_featured_user\"": \""NO\"", \""contains_featured_ip\"": \""NO\"", \""user_name\"": \""NT AUTHORITY\\\\SYSTEM\""}}"",
+  ""decoder"": {
+    ""name"": ""cortex-xdr-json""
+  },
+  ""data"": {
+    ""srcip"": ""115.23.4.213"",
+    ""dstuser"": ""NT AUTHORITY\\\\SYSTEM"",
+    ""id"": ""4049577"",
+    ""cortex_xdr"": {
+      ""external_id"": ""d89ec638-960e-4008-872e-1bcf3ae36599"",
+      ""severity"": ""medium"",
+      ""matching_status"": ""MATCHED"",
+      ""local_insert_ts"": ""1672502640623.000000"",
+      ""matching_service_rule_id"": ""f33c6ecc-cb20-4f2a-8bf8-869d21f18b0e"",
+      ""mitre_technique_id_and_name"": [
+        ""T1021.002 - Remote Services: SMB/Windows Admin Shares""
+      ],
+      ""mitre_tactic_id_and_name"": [
+        ""TA0008 - Lateral Movement""
+      ],
+      ""agent_version"": ""2.3.15.64267"",
+      ""agent_os_type"": ""Windows"",
+      ""agent_os_sub_type"": ""Windows Server 2016 [115.0 (Build 17763)]"",
+      ""alert_type"": ""Unclassified"",
+      ""resolution_status"": ""STATUS_010_NEW"",
+      ""tags"": [
+        ""DS:PANW/XDR Agent""
+      ],
+      ""alert_id"": ""4049577"",
+      ""detection_timestamp"": ""16725024263715.000000"",
+      ""name"": ""A remote service was created via RPC over SMB"",
+      ""category"": ""Lateral Movement"",
+      ""endpoint_id"": ""332358f31d8f4026af5ea001ac1ce1d0"",
+      ""description"": ""The service RemComSvc was created via RPC over SMB from 115.23.4.223. This service binary image has been seen on 4 hosts in the last 30 days"",
+      ""host_ip"": [
+        ""115.23.4.213""
+      ],
+      ""host_name"": ""HK01FS09"",
+      ""source"": ""XDR Analytics BIOC"",
+      ""action"": ""DETECTED"",
+      ""action_pretty"": ""Detected"",
+      ""original_tags"": [
+        ""DS:PANW/XDR Agent""
+      ],
+      ""agent_install_type"": ""STANDARD"",
+      ""agent_host_boot_time"": ""1664354466362.000000"",
+      ""event_sub_type"": ""2"",
+      ""association_strength"": ""50"",
+      ""event_id"": ""AAABhWjpumHfQRZTARvgGw=="",
+      ""event_type"": ""RPC Call"",
+      ""event_timestamp"": ""16725024263715.000000"",
+      ""actor_process_instance_id"": ""AAAAAAUc5+QFACBJ57E/vg=="",
+      ""actor_process_signature_status"": ""N/A"",
+      ""actor_causality_id"": ""AAAAAAUc5+QFACBJ57E/vg=="",
+      ""causality_actor_process_signature_status"": ""N/A"",
+      ""action_country"": ""UNKNOWN"",
+      ""action_process_signature_status"": ""N/A"",
+      ""os_actor_process_instance_id"": ""AdjTFg6uyrcAAAJYAAAAAA=="",
+      ""os_actor_process_image_path"": ""C:\\Windows\\System32\\services.exe"",
+      ""os_actor_process_image_name"": ""services.exe"",
+      ""os_actor_process_command_line"": ""C:\\Windows\\system32\\services.exe"",
+      ""os_actor_process_signature_status"": ""Signed"",
+      ""os_actor_process_signature_vendor"": ""Microsoft Corporation"",
+      ""os_actor_process_image_sha256"": ""751cd7ab78b18a2d8a55c47ca75b90a14234ac974d81be5f198d301b59183873"",
+      ""os_actor_process_causality_id"": ""AdjTFg6uyrcAAAJYAAAAAA=="",
+      ""os_actor_process_os_pid"": ""600"",
+      ""os_actor_thread_thread_id"": ""5152"",
+      ""fw_is_phishing"": ""N/A"",
+      ""contains_featured_host"": ""NO"",
+      ""contains_featured_user"": ""NO"",
+      ""contains_featured_ip"": ""NO"",
+      ""user_name"": ""NT AUTHORITY\\SYSTEM""
+    }
+  },
+  ""location"": ""cortex_xdr""
+}{code}"
+"azu Detect Suspicious LoL commands - Potential file dump by Sqldumper.exe: ""SQLDUMPER.EXE 17612 0 0:0 00FC1E80""",MSS-742873,Medium,False Positive,jaymicabani,vnlkjnadmin,vnlkjnadmin,1/1/2023 0:07,1/1/2023 0:55,14/2/2023 14:03,1/1/2023 0:36,,3:25,3h 25m,kanjksnlvnawev-jn,"{code}{
+  ""timestamp"": ""2023-01-01T00:07:03.275+0800"",
+  ""rule"": {
+    ""level"": 12,
+    ""description"": ""Detect Suspicious LoL commands - Potential file dump by Sqldumper.exe: \""SQLDUMPER.EXE 17612 0 0:0 00FC1E80\"""",
+    ""id"": ""109171"",
+    ""firedtimes"": 1,
+    ""mail"": true,
+    ""groups"": [
+      ""vnlkjn_caas"",
+      ""LoL_Rule_EventChannel"",
+      ""attack_stage_Execution"",
+      ""attack_category_Suspicious_Command_Execution""
+    ]
+  },
+  ""agent"": {
+    ""id"": ""1160"",
+    ""name"": ""kanjksnlvnawev-CN-SH-WEC"",
+    ""ip"": ""115.11.51.78"",
+    ""labels"": {
+      ""customer"": ""kanjksnlvnawev-cn""
+    }
+  },
+  ""manager"": {
+    ""name"": ""plwaznwo02.int.ljnaewknvjawev.lawkjnvew""
+  },
+  ""id"": ""1672502823.238969383"",
+  ""cluster"": {
+    ""name"": ""wazuh"",
+    ""node"": ""plwaznwo02""
+  },
+  ""full_log"": ""{\""win\"":{\""system\"":{\""providerName\"":\""Microsoft-Windows-Security-Auditing\"",\""providerGuid\"":\""{54849625-5478-4994-A5BA-3E3B0328C30D}\"",\""eventID\"":\""4688\"",\""version\"":\""2\"",\""level\"":\""0\"",\""task\"":\""13312\"",\""opcode\"":\""0\"",\""keywords\"":\""0x8020000000000000\"",\""systemTime\"":\""2022-12-31T16:02:51.676504700Z\"",\""eventRecordID\"":\""7095861\"",\""processID\"":\""4\"",\""threadID\"":\""3228\"",\""channel\"":\""Security\"",\""computer\"":\""kanjksnlvnawevSH_1000mu.sh.kanjksnlvnawev.local\"",\""severityValue\"":\""AUDIT_SUCCESS\"",\""message\"":\""\\\""A new process has been created.\\r\\n\\r\\nCreator Subject:\\r\\n\\tSecurity ID:\\t\\tS-1-5-80-3880718306-3832830129-1677859214-2598158968-1052248003\\r\\n\\tAccount Name:\\t\\tMSSQLSERVER\\r\\n\\tAccount Domain:\\t\\tNT Service\\r\\n\\tLogon ID:\\t\\t0x52559B80D\\r\\n\\r\\nTarget Subject:\\r\\n\\tSecurity ID:\\t\\tS-1-0-0\\r\\n\\tAccount Name:\\t\\t-\\r\\n\\tAccount Domain:\\t\\t-\\r\\n\\tLogon ID:\\t\\t0x0\\r\\n\\r\\nProcess Information:\\r\\n\\tNew Process ID:\\t\\t0x8178\\r\\n\\tNew Process Name:\\tC:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\110\\\\Shared\\\\SqlDumper.exe\\r\\n\\tToken Elevation Type:\\tTokenElevationTypeDefault (1)\\r\\n\\tCreator Process ID:\\t0x44cc\\r\\n\\tProcess Command Line:\\tSQLDUMPER.EXE 17612 0 0:0 00FC1E80\\r\\n\\r\\nToken Elevation Type indicates the type of token that was assigned to the new process in accordance with User Account Control policy.\\r\\n\\r\\nType 1 is a full token with no privileges removed or groups disabled.  A full token is only used if User Account Control is disabled or if the user is the built-in Administrator account or a service account.\\r\\n\\r\\nType 2 is an elevated token with no privileges removed or groups disabled.  An elevated token is used when User Account Control is enabled and the user chooses to start the program using Run as administrator.  An elevated token is also used when an application is configured to always require administrative privilege or to always require maximum privilege, and the user is a member of the Administrators group.\\r\\n\\r\\nType 3 is a limited token with administrative privileges removed and administrative groups disabled.  The limited token is used when User Account Control is enabled, the application does not require administrative privilege, and the user does not choose to start the program using Run as administrator.\\\""\""},\""eventdata\"":{\""subjectUserSid\"":\""S-1-5-80-3880718306-3832830129-1677859214-2598158968-1052248003\"",\""subjectUserName\"":\""MSSQLSERVER\"",\""subjectDomainName\"":\""NT Service\"",\""subjectLogonId\"":\""0x52559b80d\"",\""newProcessId\"":\""0x8178\"",\""newProcessName\"":\""C:\\\\\\\\Program Files (x86)\\\\\\\\Microsoft SQL Server\\\\\\\\110\\\\\\\\Shared\\\\\\\\SqlDumper.exe\"",\""tokenElevationType\"":\""%%1936\"",\""processId\"":\""0x44cc\"",\""commandLine\"":\""SQLDUMPER.EXE 17612 0 0:0 00FC1E80\"",\""targetUserSid\"":\""S-1-0-0\"",\""targetLogonId\"":\""0x0\""},\""keywords\"":{\""keyword\"":\""Audit Success\""}}}"",
+  ""decoder"": {
+    ""name"": ""windows_eventchannel""
+  },
+  ""data"": {
+    ""win"": {
+      ""system"": {
+        ""providerName"": ""Microsoft-Windows-Security-Auditing"",
+        ""providerGuid"": ""{54849625-5478-4994-A5BA-3E3B0328C30D}"",
+        ""eventID"": ""4688"",
+        ""version"": ""2"",
+        ""level"": ""0"",
+        ""task"": ""13312"",
+        ""opcode"": ""0"",
+        ""keywords"": ""0x8020000000000000"",
+        ""systemTime"": ""2022-12-31T16:02:51.676504700Z"",
+        ""eventRecordID"": ""7095861"",
+        ""processID"": ""4"",
+        ""threadID"": ""3228"",
+        ""channel"": ""Security"",
+        ""computer"": ""kanjksnlvnawevSH_1000mu.sh.kanjksnlvnawev.local"",
+        ""severityValue"": ""AUDIT_SUCCESS"",
+        ""message"": ""\""A new process has been created.\r\n\r\nCreator Subject:\r\n\tSecurity ID:\t\tS-1-5-80-3880718306-3832830129-1677859214-2598158968-1052248003\r\n\tAccount Name:\t\tMSSQLSERVER\r\n\tAccount Domain:\t\tNT Service\r\n\tLogon ID:\t\t0x52559B80D\r\n\r\nTarget Subject:\r\n\tSecurity ID:\t\tS-1-0-0\r\n\tAccount Name:\t\t-\r\n\tAccount Domain:\t\t-\r\n\tLogon ID:\t\t0x0\r\n\r\nProcess Information:\r\n\tNew Process ID:\t\t0x8178\r\n\tNew Process Name:\tC:\\Program Files (x86)\\Microsoft SQL Server\\110\\Shared\\SqlDumper.exe\r\n\tToken Elevation Type:\tTokenElevationTypeDefault (1)\r\n\tCreator Process ID:\t0x44cc\r\n\tProcess Command Line:\tSQLDUMPER.EXE 17612 0 0:0 00FC1E80\r\n\r\nToken Elevation Type indicates the type of token that was assigned to the new process in accordance with User Account Control policy.\r\n\r\nType 1 is a full token with no privileges removed or groups disabled.  A full token is only used if User Account Control is disabled or if the user is the built-in Administrator account or a service account.\r\n\r\nType 2 is an elevated token with no privileges removed or groups disabled.  An elevated token is used when User Account Control is enabled and the user chooses to start the program using Run as administrator.  An elevated token is also used when an application is configured to always require administrative privilege or to always require maximum privilege, and the user is a member of the Administrators group.\r\n\r\nType 3 is a limited token with administrative privileges removed and administrative groups disabled.  The limited token is used when User Account Control is enabled, the application does not require administrative privilege, and the user does not choose to start the program using Run as administrator.\""""
+      },
+      ""eventdata"": {
+        ""subjectUserSid"": ""S-1-5-80-3880718306-3832830129-1677859214-2598158968-1052248003"",
+        ""subjectUserName"": ""MSSQLSERVER"",
+        ""subjectDomainName"": ""NT Service"",
+        ""subjectLogonId"": ""0x52559b80d"",
+        ""newProcessId"": ""0x8178"",
+        ""newProcessName"": ""C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\110\\\\Shared\\\\SqlDumper.exe"",
+        ""tokenElevationType"": ""%%1936"",
+        ""processId"": ""0x44cc"",
+        ""commandLine"": ""SQLDUMPER.EXE 17612 0 0:0 00FC1E80"",
+        ""targetUserSid"": ""S-1-0-0"",
+        ""targetLogonId"": ""0x0""
+      },
+      ""keywords"": {
+        ""keyword"": ""Audit Success""
+      }
+    }
+  },
+  ""location"": ""EventChannel""
+}{code}"
+azu uata Sangfor Cyber Command Alert - The endpoint's default share was accessed..,MSS-742874,High,False Positive,xiulanshen,vnlkjnadmin,vnlkjnadmin,1/1/2023 0:09,1/1/2023 0:42,14/2/2023 14:03,1/1/2023 0:42,,0:22,22min,nnjmjn,"{code}{
+  ""timestamp"": ""2023-01-01T00:09:44.823+0800"",
+  ""rule"": {
+    ""level"": 8,
+    ""description"": ""[huata Sangfor Cyber Command Alert - The endpoint's default share was accessed.."",
+    ""id"": ""424102"",
+    ""firedtimes"": 1,
+    ""mail"": false,
+    ""groups"": [
+      ""vnlkjn_caas"",
+      ""auto_escalate_disabled""
+    ]
+  },
+  ""agent"": {
+    ""id"": ""438"",
+    ""name"": ""ljlkn-vnlkjnsoc-logcollector01"",
+    ""ip"": ""115.54.1515.131"",
+    ""labels"": {
+      ""customer"": ""ljlkn""
+    }
+  },
+  ""manager"": {
+    ""name"": ""plwazwo01.int.ljnaewknvjawev.lawkjnvew""
+  },
+  ""id"": ""1672502984.99726478"",
+  ""cluster"": {
+    ""name"": ""wazuh"",
+    ""node"": ""plwazwo01""
+  },
+  ""full_log"": ""Jan  1 00:09:48 2023-01-01 00: 09:46|!secevent|!115.54.143.20|!{\""dealStatus\"": 0, \""firstTime\"": 1672502338, \""msg_type\"": \""Cyber Attack\"", \""scan_time\"": \""\"", \""ip\"": \""115.54.103.20\"", \""tampered_url\"": \""\"", \""hostRisk\"": \""115.54.103.20(GDS_General_Svr_GDS DC)\"", \""eventKey\"": \""smbdetect|60111\"", \""password_autofill\"": \""\"", \""tag\"": [\""Default Sharing Service\""], \""detectEngine\"": \""SMB Flow Analytics\"", \""threat_level\"": 1, \""dst_mac_addr\"": \""\"", \""vulnerability_description\"": \""\"", \""scan_success\"": \""\"", \""src_port\"": \""\"", \""branchId\"": \""91\"", \""src_mac_addr\"": \""\"", \""directory_browsing\"": \""\"", \""domain_name\"": \""\"", \""rsp_email\"": \""\"", \""src_ip\"": \""\"", \""event_evidence\"": \""2022-12-31 23:59:47, 115.53.1.212 accessed default sharing path (\\\\\\\\115.54.103.20\\\\IPC$) of 115.54.103.215. Access path: \\\\\\\\115.54.103.20\\\\IPC$.2022-12-31 23:59:47, 115.42.1.252 accessed default sharing path (\\\\\\\\hkdcp2.hthk.com\\\\IPC$) of 115.54.103.215. Access path: \\\\\\\\hkdcp2.hthk.com\\\\IPC$.2022-12-31 23:59:32, 115.53.1.55 accessed default sharing path (\\\\\\\\hkdcp2.hthk.com\\\\IPC$) of 115.54.103.215. Access path: \\\\\\\\hkdcp2.hthk.com\\\\IPC$.2022-12-31 23:59:28, 115.42.11.166 accessed default sharing path (\\\\\\\\hkdcp2.hthk.com\\\\IPC$) of 115.54.103.215. Access path: \\\\\\\\hkdcp2.hthk.com\\\\IPC$.2022-12-31 23:59:06, 115.53.15.235 accessed default sharing path (\\\\\\\\hkdcp2.hthk.com\\\\IPC$) of 115.54.103.215. Access path: \\\\\\\\hkdcp2.hthk.com\\\\IPC$.2022-12-31 23:58:58, 115.42.1.152 accessed default sharing path (\\\\\\\\hkdcp2.hthk.com\\\\IPC$) of 115.54.103.215. Access path: \\\\\\\\hkdcp2.hthk.com\\\\IPC$.2022-12-30 23:59:41, 115.42.2.25 accessed default sharing path (\\\\\\\\hkdcp2.hthk.com\\\\IPC$) of 115.54.103.215. Access path: \\\\\\\\hkdcp2.hthk.com\\\\IPC$.2022-12-30 23:59:40, 115.53.1.181 accessed default sharing path (\\\\\\\\hkdcp2.hthk.com\\\\IPC$) of 115.54.103.215. Access path: \\\\\\\\hkdcp2.hthk.com\\\\IPC$.2022-12-30 23:59:35, 115.53.1.149 accessed default sharing path (\\\\\\\\hkdcp2.hthk.com\\\\IPC$) of 115.54.103.215. Access path: \\\\\\\\hkdcp2.hthk.com\\\\IPC$.2022-12-30 23:59:30, 115.53.1.212 accessed default sharing path (\\\\\\\\115.54.103.20\\\\IPC$) of 115.54.103.215. Access path: \\\\\\\\115.54.103.20\\\\IPC$.\"", \""attachment\"": \""\"", \""eventType\"": 0, \""recordDate\"": 20221231, \""classify_id\"": \""\"", \""hostName\"": \""\"", \""phishing_link\"": \""\"", \""ruleId\"": \""60111\"", \""attack_time\"": \""\"", \""attack_count\"": \""\"", \""suspect_level\"": 1, \""branch_name\"": \""GDS_General_Svr_GDS DC\"", \""msg_sub_type\"": \""Other Network Attack\"", \""downstream_traffic\"": \""\"", \""data_collection_size\"": \""\"", \""dst_ip\"": \""\"", \""log_time\"": 1672502387, \""principle\"": \""Logical partitions and directories are shared by default on Windows. This is for the convenience of administrators to manage servers, but it has also become a security vulnerability. Anyone on the network can intrude the endpoint through the default sharing path.\"", \""upstream_traffic\"": \""\"", \""vulnerability_name\"": \""\"", \""stage\"": 5, \""msg_count\"": \""\"", \""server_sensative_directory\"": \""\"", \""session_token\"": \""\"", \""url\"": \""\"", \""scan_count\"": \""\"", \""event_content\"": \""The endpoint's default share was accessed.\"", \""solution\"": \""1. Disable default sharing service if it is unnecessary for your business.\\n2. Check whether the endpoint is required for normal business. If required, add the endpoint IP to the global whitelist.\\n3. Check whether the action was performed by colleagues. If so, handle it according to internal company regulations.\\n\\nRecommended antivirus software:\\n<a href=\\\""https://www.sangfor.com/product/sxf-network-security-endpoint-secure.html\\\"" target=\\\""_blank\\\"">https://www.sangfor.com/product/sxf-network-security-endpoint-secure.html</a>\"", \""email_from\"": \""\"", \""email_to\"": \""\"", \""dst_host\"": \""\"", \""dst_port\"": \""\"", \""classify1_id\"": \""\"", \""data_collection_time\"": \""\"", \""src_host\"": \""\""}"",
+  ""predecoder"": {
+    ""program_name"": ""00"",
+    ""timestamp"": ""Jan  1 00:09:48"",
+    ""hostname"": ""2023-01-01""
+  },
+  ""decoder"": {
+    ""parent"": ""sangfor-ccom-json"",
+    ""name"": ""sangfor-ccom-json""
+  },
+  ""data"": {
+    ""srcport"": """",
+    ""dstport"": """",
+    ""url"": """",
+    ""dealStatus"": ""0"",
+    ""firstTime"": ""1672502338"",
+    ""msg_type"": ""Cyber Attack"",
+    ""ip"": ""115.54.103.20"",
+    ""hostRisk"": ""115.54.103.20(GDS_General_Svr_GDS DC)"",
+    ""eventKey"": ""smbdetect|60111"",
+    ""tag"": ""Default Sharing Service,"",
+    ""detectEngine"": ""SMB Flow Analytics"",
+    ""threat_level"": ""1"",
+    ""branchId"": ""91"",
+    ""event_evidence"": ""2022-12-31 23:59:47, 115.53.1.212 accessed default sharing path (\\\\115.54.103.20\\IPC$) of 115.54.103.215. Access path: \\\\115.54.103.20\\IPC$.2022-12-31 23:59:47, 115.42.1.252 accessed default sharing path (\\\\hkdcp2.hthk.com\\IPC$) of 115.54.103.215. Access path: \\\\hkdcp2.hthk.com\\IPC$.2022-12-31 23:59:32, 115.53.1.55 accessed default sharing path (\\\\hkdcp2.hthk.com\\IPC$) of 115.54.103.215. Access path: \\\\hkdcp2.hthk.com\\IPC$.2022-12-31 23:59:28, 115.42.11.166 accessed default sharing path (\\\\hkdcp2.hthk.com\\IPC$) of 115.54.103.215. Access path: \\\\hkdcp2.hthk.com\\IPC$.2022-12-31 23:59:06, 115.53.15.235 accessed default sharing path (\\\\hkdcp2.hthk.com\\IPC$) of 115.54.103.215. Access path: \\\\hkdcp2.hthk.com\\IPC$.2022-12-31 23:58:58, 115.42.1.152 accessed default sharing path (\\\\hkdcp2.hthk.com\\IPC$) of 115.54.103.215. Access path: \\\\hkdcp2.hthk.com\\IPC$.2022-12-30 23:59:41, 115.42.2.25 accessed default sharing path (\\\\hkdcp2.hthk.com\\IPC$) of 115.54.103.215. Access path: \\\\hkdcp2.hthk.com\\IPC$.2022-12-30 23:59:40, 115.53.1.181 accessed default sharing path (\\\\hkdcp2.hthk.com\\IPC$) of 115.54.103.215. Access path: \\\\hkdcp2.hthk.com\\IPC$.2022-12-30 23:59:35, 115.53.1.149 accessed default sharing path (\\\\hkdcp2.hthk.com\\IPC$) of 115.54.103.215. Access path: \\\\hkdcp2.hthk.com\\IPC$.2022-12-30 23:59:30, 115.53.1.212 accessed default sharing path (\\\\115.54.103.20\\IPC$) of 115.54.103.215. Access path: \\\\115.54.103.20\\IPC$."",
+    ""eventType"": ""0"",
+    ""recordDate"": ""20221231"",
+    ""ruleId"": ""60111"",
+    ""suspect_level"": ""1"",
+    ""branch_name"": ""GDS_General_Svr_GDS DC"",
+    ""msg_sub_type"": ""Other Network Attack"",
+    ""log_time"": ""1672502387"",
+    ""principle"": ""Logical partitions and directories are shared by default on Windows. This is for the convenience of administrators to manage servers, but it has also become a security vulnerability. Anyone on the network can intrude the endpoint through the default sharing path."",
+    ""stage"": ""5"",
+    ""event_content"": ""The endpoint's default share was accessed."",
+    ""solution"": ""1. Disable default sharing service if it is unnecessary for your business.\n2. Check whether the endpoint is required for normal business. If required, add the endpoint IP to the global whitelist.\n3. Check whether the action was performed by colleagues. If so, handle it according to internal company regulations.\n\nRecommended antivirus software:\n<a href=\""https://www.sangfor.com/product/sxf-network-security-endpoint-secure.html\"" target=\""_blank\"">https://www.sangfor.com/product/sxf-network-security-endpoint-secure.html</a>""
+  },
+  ""location"": ""/var/log/rsyslog-115.54.143.20-sangforcc.log""
+}{code}"
+azu Detect Potential Dcsync,MSS-742875,Medium,Rule Validation,jaymicabani,vnlkjnadmin,vnlkjnadmin,1/1/2023 0:10,1/1/2023 22:42,14/2/2023 14:03,1/1/2023 22:42,,3:27,3h 27m,mvn,"{code}{
+  ""timestamp"": ""2023-01-01T00:10:04.753+0800"",
+  ""rule"": {
+    ""level"": 12,
+    ""description"": ""Detect Potential Dcsync"",
+    ""id"": ""107069"",
+    ""firedtimes"": 6,
+    ""mail"": true,
+    ""groups"": [
+      ""vnlkjn_caas"",
+      ""OS"",
+      ""windows"",
+      ""all_client"",
+      ""attack_stage_Persistence"",
+      ""attack_category_System_Configuration_Abuse""
+    ]
+  },
+  ""agent"": {
+    ""id"": ""4263"",
+    ""name"": ""aebweabwae-WINDC3"",
+    ""ip"": ""115.2.4.37"",
+    ""labels"": {
+      ""customer"": ""aebweabwae""
+    }
+  },
+  ""manager"": {
+    ""name"": ""plwaznwo01.int.ljnaewknvjawev.lawkjnvew""
+  },
+  ""id"": ""1672503004.32606207"",
+  ""cluster"": {
+    ""name"": ""wazuh"",
+    ""node"": ""plwaznwo01""
+  },
+  ""full_log"": ""{\""win\"":{\""system\"":{\""providerName\"":\""Microsoft-Windows-Security-Auditing\"",\""providerGuid\"":\""{54849625-5478-4994-A5BA-3E3B0328C30D}\"",\""eventID\"":\""4662\"",\""version\"":\""0\"",\""level\"":\""0\"",\""task\"":\""14080\"",\""opcode\"":\""0\"",\""keywords\"":\""0x8020000000000000\"",\""systemTime\"":\""2022-12-31T16:10:04.212956700Z\"",\""eventRecordID\"":\""2548233141\"",\""processID\"":\""968\"",\""threadID\"":\""8488\"",\""channel\"":\""Security\"",\""computer\"":\""WINDC3.oa.aebweabwae.com\"",\""severityValue\"":\""AUDIT_SUCCESS\"",\""message\"":\""\\\""An operation was performed on an object.\\r\\n\\r\\nSubject :\\r\\n\\tSecurity ID:\\t\\tS-1-5-21-1884322707-1483091406-311576647-8274\\r\\n\\tAccount Name:\\t\\toffice365admin\\r\\n\\tAccount Domain:\\t\\taebweabwae.COM\\r\\n\\tLogon ID:\\t\\t0x8817D41A\\r\\n\\r\\nObject:\\r\\n\\tObject Server:\\t\\tDS\\r\\n\\tObject Type:\\t\\t%{19195a5b-6da0-11d0-afd3-00c04fd930c9}\\r\\n\\tObject Name:\\t\\t%{949c65fa-b6f5-41ce-a75f-48d89a1e4363}\\r\\n\\tHandle ID:\\t\\t0x0\\r\\n\\r\\nOperation:\\r\\n\\tOperation Type:\\t\\tObject Access\\r\\n\\tAccesses:\\t\\tControl Access\\r\\n\\t\\t\\t\\t\\r\\n\\tAccess Mask:\\t\\t0x100\\r\\n\\tProperties:\\t\\tControl Access\\r\\n\\t\\t{1131f6ad-9c07-11d1-f79f-00c04fc2dcd2}\\r\\n\\t{19195a5b-6da0-11d0-afd3-00c04fd930c9}\\r\\n\\r\\n\\r\\nAdditional Information:\\r\\n\\tParameter 1:\\t\\t-\\r\\n\\tParameter 2:\\t\\t\\\""\""},\""eventdata\"":{\""subjectUserSid\"":\""S-1-5-21-1884322707-1483091406-311576647-8274\"",\""subjectUserName\"":\""office365admin\"",\""subjectDomainName\"":\""aebweabwae.COM\"",\""subjectLogonId\"":\""0x8817d41a\"",\""objectServer\"":\""DS\"",\""objectType\"":\""%{19195a5b-6da0-11d0-afd3-00c04fd930c9}\"",\""objectName\"":\""%{949c65fa-b6f5-41ce-a75f-48d89a1e4363}\"",\""operationType\"":\""Object Access\"",\""handleId\"":\""0x0\"",\""accessList\"":\""%%7688\"",\""accessMask\"":\""0x100\"",\""properties\"":\""%%7688    {1131f6ad-9c07-11d1-f79f-00c04fc2dcd2}   {19195a5b-6da0-11d0-afd3-00c04fd930c9}\""}}}"",
+  ""decoder"": {
+    ""name"": ""windows_eventchannel""
+  },
+  ""data"": {
+    ""win"": {
+      ""system"": {
+        ""providerName"": ""Microsoft-Windows-Security-Auditing"",
+        ""providerGuid"": ""{54849625-5478-4994-A5BA-3E3B0328C30D}"",
+        ""eventID"": ""4662"",
+        ""version"": ""0"",
+        ""level"": ""0"",
+        ""task"": ""14080"",
+        ""opcode"": ""0"",
+        ""keywords"": ""0x8020000000000000"",
+        ""systemTime"": ""2022-12-31T16:10:04.212956700Z"",
+        ""eventRecordID"": ""2548233141"",
+        ""processID"": ""968"",
+        ""threadID"": ""8488"",
+        ""channel"": ""Security"",
+        ""computer"": ""WINDC3.oa.aebweabwae.com"",
+        ""severityValue"": ""AUDIT_SUCCESS"",
+        ""message"": ""\""An operation was performed on an object.\r\n\r\nSubject :\r\n\tSecurity ID:\t\tS-1-5-21-1884322707-1483091406-311576647-8274\r\n\tAccount Name:\t\toffice365admin\r\n\tAccount Domain:\t\taebweabwae.COM\r\n\tLogon ID:\t\t0x8817D41A\r\n\r\nObject:\r\n\tObject Server:\t\tDS\r\n\tObject Type:\t\t%{19195a5b-6da0-11d0-afd3-00c04fd930c9}\r\n\tObject Name:\t\t%{949c65fa-b6f5-41ce-a75f-48d89a1e4363}\r\n\tHandle ID:\t\t0x0\r\n\r\nOperation:\r\n\tOperation Type:\t\tObject Access\r\n\tAccesses:\t\tControl Access\r\n\t\t\t\t\r\n\tAccess Mask:\t\t0x100\r\n\tProperties:\t\tControl Access\r\n\t\t{1131f6ad-9c07-11d1-f79f-00c04fc2dcd2}\r\n\t{19195a5b-6da0-11d0-afd3-00c04fd930c9}\r\n\r\n\r\nAdditional Information:\r\n\tParameter 1:\t\t-\r\n\tParameter 2:\t\t\""""
+      },
+      ""eventdata"": {
+        ""subjectUserSid"": ""S-1-5-21-1884322707-1483091406-311576647-8274"",
+        ""subjectUserName"": ""office365admin"",
+        ""subjectDomainName"": ""aebweabwae.COM"",
+        ""subjectLogonId"": ""0x8817d41a"",
+        ""objectServer"": ""DS"",
+        ""objectType"": ""%{19195a5b-6da0-11d0-afd3-00c04fd930c9}"",
+        ""objectName"": ""%{949c65fa-b6f5-41ce-a75f-48d89a1e4363}"",
+        ""operationType"": ""Object Access"",
+        ""handleId"": ""0x0"",
+        ""accessList"": ""%%7688"",
+        ""accessMask"": ""0x100"",
+        ""properties"": ""%%7688    {1131f6ad-9c07-11d1-f79f-00c04fc2dcd2}   {19195a5b-6da0-11d0-afd3-00c04fd930c9}""
+      }
+    }
+  },
+  ""location"": ""EventChannel""
+}{code}"
