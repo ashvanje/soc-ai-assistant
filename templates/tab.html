@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Combined Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#tab1">GPT-3 Frontend</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab2">CSV Viewer</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="tab1" class="tab-pane fade show active">
+
+                <body>
+                    <div class="container">
+                        <h1>GPT-3 Frontend</h1>
+                        <form method="POST" action="/">
+                            <input type="text" name="input_text" placeholder="Enter input" value="">
+                            <textarea name="input_text2" rows="20" cols="100">
+                1. help me to turn this jira ticket into a report
+                2. also help me to determine whether this is false positive
+                3. summarize the description for me, within 300 words
+                4. no need show the raw log, but beautify and interpret the log for me
+                5. based on the log, please suggest how to investigate and resolve
+                6. based on the log please also suggest a MITRE ATTACK path
+                7. tell me how to investigate
+                8. write me a wazuh XML rule to whitelist this
+                9. help me draft a client email reporting the problem
+                </textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+                        <div id="output">
+                            {% for bullet_point in output %}
+                            <div id="bullet-box">
+                                <h3>{{ bullet_point[0] }}</h3>
+                                <div id="bullet-point">
+                                    <pre>{{ bullet_point[1] }}</pre>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div id="loading" style="display: none;">
+                            <div class="loader"></div>
+                        </div>
+                        <script>
+                            // Add an event listener to the window's beforeunload event to redirect on refresh
+                            // window.addEventListener('beforeunload', function() {
+                            //     window.location.href = '/refresh';
+                            // });
+                        </script>
+                        <script>
+                            function submitForm(event) {
+                                event.preventDefault(); // Prevent the default form submission
+
+                                console.log('submitForm')
+                                var inputText = document.getElementById("input_text");
+                                var inputText2 = document.getElementById("input_text2");
+                                var outputDiv = document.getElementById("output");
+                                var loadingDiv = document.getElementById("loading");
+                                originalText = inputText2;
+
+                                // Clear the output and show the loading icon
+                                outputDiv.innerHTML = "";
+                                loadingDiv.querySelector(".loader").style.display = "block";
+
+                                // Perform any additional validation or processing if needed
+
+                                // Create a new FormData object
+                                var formData = new FormData();
+                                formData.append("input_text", inputText.value);
+                                formData.append("input_text2", inputText2.value);
+
+                                // Make the API call using fetch
+                                fetch("/", {
+                                    method: "POST",
+                                    body: formData
+                                })
+                                    .then(function (response) {
+                                        if (response.ok) {
+                                            // Success: Update the output with the response
+                                            return response.text();
+                                        } else {
+                                            // Error: Log the error message
+                                            console.error("Request failed. Status:", response.status);
+                                        }
+                                    })
+                                    .then(function (data) {
+                                        // Hide the loading icon and update the output
+                                        loadingDiv.style.display = "none";
+                                        outputDiv.innerHTML = data;
+                                        input_text2.value = originalText;
+                                    })
+                                    .catch(function (error) {
+                                        console.error("Error:", error);
+                                    });
+                            }
+                        </script>
+
+
+                    </div>
+                </body>
+            </div>
+            <div id="tab2" class="tab-pane fade">
+                <!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Viewer</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#csvTable').DataTable({
+                "paging": true,
+                "lengthMenu": [10, 25, 50],
+                "searching": true,
+                "ordering": true,
+                "info": true,
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #tableContainer {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            white-space: nowrap;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSV Viewer</h1>
+    <div id="tableContainer">
+        <table id="csvTable">
+            <thead>
+                <tr>
+                    {% for column in columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                    <tr>
+                        {% for value in row %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#csvTable').DataTable({
+                "paging": true,
+                "lengthMenu": [10, 25, 50],
+                "searching": true,
+                "ordering": true,
+                "info": true,
+            });
+
+            $('#myTabs a').on('click', function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

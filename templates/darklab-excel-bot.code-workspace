@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../darklab-excel-bot"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../Downloads/wazuh-prod-ruleset"
+		}
+	],
+	"settings": {}
+}

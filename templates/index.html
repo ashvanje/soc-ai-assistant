@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPT-3 Frontend</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>GPT-3 Frontend</h1>
+        <form method="POST" action="/" onsubmit="return submitForm(event)">
+            <input type="text"  id="input_text"  name="input_text" placeholder="Enter input" value="">
+            <textarea id="input_text2" name="input_text2" rows="20" cols="100">
+1. help me to turn this jira ticket into a report
+2. also help me to determine whether this is false positive
+3. summarize the description for me, within 300 words
+4. no need show the raw log, but beautify and interpret the log for me
+5. based on the log, please suggest how to investigate and resolve
+6. based on the log please also suggest a MITRE ATTACK path
+7. tell me how to investigate
+8. write me a wazuh XML rule to whitelist this
+9. help me draft a client email reporting the problem
+</textarea>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="output">
+            {% for bullet_point in output %}
+            <div id="bullet-box">
+                <h3>{{ bullet_point[0] }}</h3>
+                <div id="bullet-point">
+<pre>{{ bullet_point[1] }}</pre>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div id="loading" style="display: none;">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            
+            console.log('submitForm');
+            var inputText = document.getElementById("input_text");
+            var inputText2 = document.getElementById("input_text2");
+            var outputDiv = document.getElementById("output");
+            var loadingDiv = document.getElementById("loading");
+            var originalText = inputText2.value;
+
+            outputDiv.innerHTML = "";
+            loadingDiv.style.display = "block";
+
+            var formData = new FormData();
+            formData.append("input_text", inputText.value);
+            formData.append("input_text2", inputText2.value);
+
+            fetch("/", {
+                method: "POST",
+                body: formData
+            })
+            .then(function (response) {
+                if (response.ok) {
+                    console.log('response')
+                    console.log(response)
+                    return response.text();
+                } else {
+                    console.error("Request failed. Status:", response.status);
+                }
+            })
+            .then(function (data) {
+                console.log('data')
+                console.log(data)
+                loadingDiv.style.display = "none";
+                var bulletPoints = JSON.parse(data); // Assuming the data is a JSON string
+                
+                // Clear the output and rebuild it using the bullet points
+                outputDiv.innerHTML = "";
+                
+                bulletPoints.forEach(function (bulletPoint) {
+                    var bulletBox = document.createElement("div");
+                    bulletBox.id = "bullet-box";
+                    
+                    var heading = document.createElement("h3");
+                    heading.textContent = bulletPoint[0];
+                    
+                    var bulletPointDiv = document.createElement("div");
+                    bulletPointDiv.id = "bullet-point";
+                    
+                    var pre = document.createElement("pre");
+                    pre.textContent = bulletPoint[1];
+                    
+                    bulletPointDiv.appendChild(pre);
+                    bulletBox.appendChild(heading);
+                    bulletBox.appendChild(bulletPointDiv);
+                    
+                    outputDiv.appendChild(bulletBox);
+                });
+                
+                inputText2.value = originalText;
+            })
+            .catch(function (error) {
+                console.error("Error:", error);
+            });
+        }
+    </script>
+</body>
+</html>

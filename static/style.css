@@ -1,0 +1,108 @@
+/* Increase specificity for the .container selector */
+body .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Increase specificity for the h1 selector */
+body h1 {
+    text-align: center;
+}
+
+/* Increase specificity for the form selector */
+body form {
+    margin-bottom: 20px;
+}
+
+/* Increase specificity for the input[type="text"] selector */
+body input[type="text"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Increase specificity for the textarea selector */
+body textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+/* Increase specificity for the input[type="submit"] selector */
+body input[type="submit"] {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Increase specificity for the #output selector */
+body #output {
+    background-color: #f9f9f9;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Increase specificity for the #bullet-point selector */
+body #bullet-point {
+    font-family: 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid rgb(196, 25, 25);
+    border-radius: 4px;
+    margin-top: 10;
+    padding-top: 10;
+}
+
+/* Increase specificity for the #bullet-point p selector */
+body #bullet-point p {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Increase specificity for the #bullet-box > h3 selector */
+body #bullet-box > h3 {
+    font-family: 'Arial';
+    margin-top: 10;
+    padding-top: 10;
+    font-size: 1rem
+}
+
+/* Increase specificity for the #bullet-point pre selector */
+body #bullet-point pre {
+    white-space: pre-wrap;
+}
+
+/* Increase specificity for the .loader selector */
+body .loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+/* Increase specificity for the @keyframes spin selector */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

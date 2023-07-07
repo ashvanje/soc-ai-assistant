@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GPT-3 Frontend</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>GPT-3 Frontend</h1>
+        <form method="POST" action="/" onsubmit="submitForm(event)">
+            <input type="text" name="input_text" placeholder="Enter input" value="">
+            <textarea name="input_text2" rows="20" cols="100">
+1. help me to turn this jira ticket into a report
+2. also help me to determine whether this is false positive
+3. summarize the description for me, within 300 words
+4. no need show the raw log, but beautify and interpret the log for me
+5. based on the log, please suggest how to investigate and resolve
+6. based on the log please also suggest a MITRE ATTACK path
+7. tell me how to investigate
+8. write me a wazuh XML rule to whitelist this
+9. help me draft a client email reporting the problem
+</textarea>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="output">
+            {% for bullet_point in output %}
+            <div id="bullet-box">
+                <h3>{{ bullet_point[0] }}</h3>
+                <div id="bullet-point">
+                    <pre>{{ bullet_point[1] }}</pre>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div id="loading" style="display: none;">
+            <div class="loader"></div>
+        </div>
+        <script>
+            function submitForm(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                var inputText = document.getElementsByName("input_text")[0];
+                var inputText2 = document.getElementsByName("input_text2")[0];
+                var outputDiv = document.getElementById("output");
+                var loadingDiv = document.getElementById("loading");
+
+                // Clear the output and show the loading icon
+                outputDiv.innerHTML = "";
+                loadingDiv.style.display = "block";
+
+                // Perform any additional validation or processing if needed
+
+                // Create a new FormData object
+                var formData = new FormData();
+                formData.append("input_text", inputText.value);
+                formData.append("input_text2", inputText2.value);
+
+                // Make the API call using fetch
+                fetch("/", {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(function (response) {
+                        if (response.ok) {
+                            // Success: Update the output with the response
+                            return response.text();
+                        } else {
+                            // Error: Log the error message
+                            console.error("Request failed. Status:", response.status);
+                        }
+                    })
+                    .then(function (data) {
+                        // Hide the loading icon and update the output
+                        loadingDiv.style.display = "none";
+                        outputDiv.innerHTML = data;
+                    })
+                    .catch(function (error) {
+                        console.error("Error:", error);
+                    });
+            }
+        </script>
+    </div>
+</body>
+
+</html>
